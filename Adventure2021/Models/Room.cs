@@ -9,6 +9,7 @@ namespace Adventure2021.Models
     {
         Start = 0,
         Hall = 1,
-        Library = 2
+        Library = 2,
+        DiningHall = 3
     }
 }
