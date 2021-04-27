@@ -1,0 +1,15 @@
+﻿@page
+@model Adventure2021.Pages.TrapModel
+@{
+}
+<h1>Trap</h1>
+@if (Model.TrapType == 0)
+{
+    <p>You triggered a trap!</p>
+}
+else
+{
+    <p>You triggered a mouse trap!</p>
+}
+
+<div><a asp-page="Place" asp-route-id="@Model.ReturnRoom">Pokračovat</a></div>

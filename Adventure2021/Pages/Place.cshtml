@@ -7,6 +7,10 @@
 <div>
     @Html.Raw(Model.Location.Description)
 </div>
+<div>
+    <h2>Player stats</h2>
+    <p>HP: @Model.State.HP</p>
+</div>
 <ul>
     @foreach (var c in Model.Connections)
 
@@ -18,7 +22,7 @@
         }
         else
         {
-        <a asp-page="@c.TargetSpecialPage" asp-route-id="@c.Target">@Html.Raw(c.Description)</a>
+        <a asp-page="@c.TargetSpecialPage" asp-route-id="@c.Target" asp-route-parameter="@c.Parameter">@Html.Raw(c.Description)</a>
         }
         </li>
     }

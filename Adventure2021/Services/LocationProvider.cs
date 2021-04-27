@@ -19,6 +19,7 @@ namespace Adventure2021.Services
         {
             new Connection { From = Room.Start, Target = Room.Hall, Description = "<p>Go to hall</p>"},
             new Connection { From = Room.Hall, Target = Room.Library, Description = "<p>Visit Library</p>" },
+            new Connection { From = Room.Hall, Target = Room.Hall, Description = "<p>Search bookcase</p>", TargetSpecialPage="Trap", Parameter = 1 },
             new Connection { From = Room.Library, Target = Room.Hall, Description = "<p>Back to hall</p>"},
             new Connection { From = Room.Hall, Target = Room.Start, Description = "<p>Search fireplace</p>", TargetSpecialPage="GameOver"}
         };
